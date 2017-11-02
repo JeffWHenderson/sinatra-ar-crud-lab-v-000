@@ -11,6 +11,10 @@ class ApplicationController < Sinatra::Base
     "go to /posts/new"
   end
 
+  get "/posts/:id" do
+    erb :'show'
+  end 
+  
   get '/posts/new' do
     erb :'new'
   end
@@ -20,7 +24,7 @@ class ApplicationController < Sinatra::Base
     @post = Post.create(params)   #I can just load params(name: params[:post_name], content: params[:post_content])
     @post.save
     #"#{post.name} \n #{post.content}"
-    redirect  :'/posts'
+    redirect  :'posts'
   end
 
   get '/posts' do
@@ -28,5 +32,5 @@ class ApplicationController < Sinatra::Base
     erb :'index'
   end
 
-  # "/posts/#{@post1.id}"
+
 end
