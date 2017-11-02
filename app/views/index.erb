@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head></head>
 <body>
-  <%= @posts.each %>
+  <% @posts.each do |p| %>
+  <%= p.name == p.content  %>
+  <% end %>
 </body>
 <footer></footer>
