@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts' do
-    "#{Post.all.each {|p| p.name}}"
+    "#{Post.all.map {|p| 'p.name'}}"
   end
 
   # "/posts/#{@post1.id}"
