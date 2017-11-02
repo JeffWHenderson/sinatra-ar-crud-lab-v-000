@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts' do
-    "#{Post.all} #{Post.all.first.content}"
+    @posts = Post.all
   end
 
   # "/posts/#{@post1.id}"
