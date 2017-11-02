@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-
+    "go to /posts/new"
   end
 
   get '/posts/new' do
