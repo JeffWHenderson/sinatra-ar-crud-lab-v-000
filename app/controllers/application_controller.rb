@@ -17,8 +17,8 @@ class ApplicationController < Sinatra::Base
 
   post '/posts' do
     #@data = params
-    post = Post.create(params)   #I can just load params(name: params[:post_name], content: params[:post_content])
-    post.save
+    @post = Post.create(params)   #I can just load params(name: params[:post_name], content: params[:post_content])
+    @post.save
     #"#{post.name} \n #{post.content}"
     redirect  :'/posts'
   end
