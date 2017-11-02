@@ -2,7 +2,7 @@
 <head></head>
 <body>
   <% @posts.each do |p| %>
-  <%= p.name p.content %>
+  <%= "#{p.name} \n #{p.content}" %>
   <% end %>
 </body>
 <footer></footer>
