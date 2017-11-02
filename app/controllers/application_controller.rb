@@ -6,6 +6,9 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
+  get '/' do
+    redirect to '/posts/new'
+  end
   get '/posts/new' do
     erb :new
   end
