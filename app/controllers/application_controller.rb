@@ -16,6 +16,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts' do
-    
+    @data = params
   end
 end
