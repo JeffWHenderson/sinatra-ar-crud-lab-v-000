@@ -21,4 +21,8 @@ class ApplicationController < Sinatra::Base
     post.save
     "#{post.name} \n #{post.content}"
   end
+
+  get '/posts' do 
+    "#{Post.all}"
+  end
 end
