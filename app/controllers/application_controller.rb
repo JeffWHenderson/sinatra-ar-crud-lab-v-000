@@ -10,27 +10,27 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  post '/posts' do 
+  post '/posts' do
     @post = Post.create(params)
     redirect to '/posts'
   end
 
-  get '/posts' do 
+  get '/posts' do
     @posts = Post.all
     erb :index
   end
 
-  get '/posts/:id' do 
+  get '/posts/:id' do
     @post = Post.find_by_id(params[:id])
     erb :show
   end
 
-  get '/posts/:id/edit' do 
+  get '/posts/:id/edit' do
     @post = Post.find_by_id(params[:id])
     erb :edit
   end
 
-  post '/posts/:id' do 
+  post '/posts/:id' do
     @post = Post.find_by_id(params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
