@@ -18,6 +18,6 @@ class ApplicationController < Sinatra::Base
   post '/posts' do
     @data = params
     post = Post.create(name: params[:user_input])
-    "#{post}"
+    "#{post.name}"
   end
 end
