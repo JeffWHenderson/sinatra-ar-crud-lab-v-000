@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts' do
-    "#{Post.all.last}"
+    "#{Post.all.last.name}"
   end
 
   # "/posts/#{@post1.id}"
