@@ -18,6 +18,6 @@ class ApplicationController < Sinatra::Base
   post '/posts' do
     #@data = params
     post = Post.create(name: params[:post_name], content: params[:post_content])
-    "#{post.name}"
+    "#{post.name} \n #{post.content}"
   end
 end
