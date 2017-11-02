@@ -11,11 +11,11 @@ class ApplicationController < Sinatra::Base
     "go to /posts/new"
   end
 
-  get "/posts/:id" do
-    "200"
-
-    # erb :'show'
-  end
+  # get "/posts/:id" do
+  #   "200"
+  # 
+  #   # erb :'show'
+  # end
 
   get '/posts/new' do
     erb :'new'
