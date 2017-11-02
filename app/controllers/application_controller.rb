@@ -12,9 +12,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/posts/:id" do
-
+    "200"
     
-    erb :'show'
+    # erb :'show'
   end
 
   get '/posts/new' do
